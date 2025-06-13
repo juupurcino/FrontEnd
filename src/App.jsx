@@ -11,7 +11,7 @@ function App() {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get("https://frontprova-4w2zxuczm-juupurcinos-projects.vercel.app/api/person");
+      const res = await axios.get("https://back-prova-tfuh.onrender.com/api/person");
       setList(res.data);
       console.log(res.data); 
     } catch (error) {
@@ -21,7 +21,7 @@ function App() {
 
   const registerUser = async () => {
     try { 
-      await axios.post("https://frontprova-4w2zxuczm-juupurcinos-projects.vercel.app/api/person",{
+      await axios.post("https://back-prova-tfuh.onrender.com/api/person",{
         name, lastname, salary
       });
     } catch (error) {
@@ -31,7 +31,7 @@ function App() {
 
   const deleteUser = async (id) => {
     try { 
-      await axios.delete(`https://frontprova-4w2zxuczm-juupurcinos-projects.vercel.app/api/person/${id}`);
+      await axios.delete(`https://back-prova-tfuh.onrender.com/api/person/${id}`);
       getUsers()
     } catch (error) {
       console.error("Erro ao inserir", error);
